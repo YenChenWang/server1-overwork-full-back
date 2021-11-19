@@ -4,6 +4,7 @@ const app = express();
 import cors from 'cors';
 import bodyParser from 'body-Parser';
 import sleepsAnalyze from './controllers/index_SleepsAnalyze.js';
+import heartRateAnalyze from './controllers/index_HeartRateAnalyze.js';
 
 var corsOptions = {
     origin: "http://localhost:3000",
@@ -27,3 +28,4 @@ app.use(function (req, res, next) {
 });
 
 app.use('/', sleepsAnalyze);
+app.use('/', heartRateAnalyze);
