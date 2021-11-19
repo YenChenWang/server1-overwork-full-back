@@ -9,8 +9,8 @@ const secondToTime = (sec) => {
   const s = sec % 60;   // 秒
   const m = (parseInt(sec / 60)) % 60;   // 分
   const h = parseInt((parseInt(sec / 60)) / 60);   // 時
-  // 1 點 ~ 9 點
-  if (h >= 1 && h < 10) {
+  // 0 點 ~ 9 點
+  if (h >= 0 && h < 10) {
     // 0 分 ~ 9 分
     if (m >= 0 && m < 10) {
       // 0 秒 ~ 9 秒
