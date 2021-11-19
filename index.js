@@ -3,10 +3,7 @@ import express from 'express';
 const app = express();
 import cors from 'cors';
 import bodyParser from 'body-Parser';
-import month from './controllers/index_Month.js';
-import personal from './controllers/index_Personal.js';
-import watch from './controllers/index_Watch.js';
-import menu from './controllers/index_Menu.js';
+import sleepsAnalyze from './controllers/index_SleepsAnalyze.js';
 
 var corsOptions = {
     origin: "http://localhost:3000",
@@ -29,8 +26,4 @@ app.use(function (req, res, next) {
     next();
 });
 
-app.use('/', month);
-app.use('/', personal);
-app.use('/', watch);
-app.use('/', menu);
-
+app.use('/', sleepsAnalyze);
